@@ -1,0 +1,11 @@
+{% extends "13.bootstrap.html" %}
+{% block title %}수원{% endblock %}
+{% block subtitle %}Hot Places<i class="fas fa-home"></i>{% endblock %}
+{% block content %}
+    <form action="/hotPlaces" method="post" style="margin-top: 15%;">
+        <input type="text" name="place1">
+        <input type="text" name="place2">
+        <input type="text" name="place3">
+        <input type="submit" value="제출">
+    </form>
+{% endblock %}

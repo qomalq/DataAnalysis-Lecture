@@ -1,0 +1,8 @@
+{% extends "13.bootstrap.html" %}
+{% block title %}Result{% endblock %}
+{% block subtitle %}산점도 결과<i class="fas fa-home"></i>{% endblock %}
+{% block content %}
+    <img src="{{url_for('static',filename='img/scatter.png')}}">
+    <br><br>
+    <button onclick="location.href='/scatter'">재실행</button>
+{% endblock %}

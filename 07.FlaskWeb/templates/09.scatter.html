@@ -1,0 +1,32 @@
+{% extends "13.bootstrap.html" %}
+{% block title %}Scatter Plot{% endblock %}
+{% block subtitle %}산점도<i class="fas fa-home"></i>{% endblock %}
+{% block content %}
+<form action="/scatter", method="post" style="margin-top: 5%; margin-left: 10%;">
+    <table>
+        <tr>
+            <td style="font-size: 50px;">점의 갯수</td>
+            <td><input type="text" name="num" style="height: 50px; font-size: 40px;"></td>
+        </tr>
+        <tr>
+            <td style="font-size: 50px;">X 평균</td>
+            <td><input type="text" name="mean" style="height: 50px; font-size: 40px;"></td>
+        </tr>
+        <tr>
+            <td style="font-size: 50px;">X 표준편차</td>
+            <td><input type="text" name="std" style="height: 50px; font-size: 40px;"></td>
+        </tr>
+        <tr>
+            <td style="font-size: 50px;">Y 최소값</td>
+            <td><input type="text" name="min" style="height: 50px; font-size: 40px;"></td>
+        </tr>
+        <tr>
+            <td style="font-size: 50px;">Y 최대값</td>
+            <td><input type="text" name="max" style="height: 50px; font-size: 40px;"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="확인"></td>
+        </tr>
+    </table>
+</form>
+{% endblock %}
