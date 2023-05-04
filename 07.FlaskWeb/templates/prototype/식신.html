@@ -1,0 +1,23 @@
+{% extends "prototype/base.html" %}
+{% block title %}식신{% endblock %}
+{% block subtitle %}식신<i class="fas fa-home"></i>{% endblock %}
+{% block content %}
+    <table border="1" style="margin-top: 2%; width: 1200px;">
+        <tr>
+            <th style="text-align: center;">이미지</th>
+            <th>이름</th>
+            <th>평점</th>
+            <th>위치</th>
+            <th>메뉴</th>
+        </tr>
+    {% for eat in eat_list %}
+        <tr>
+            <td><img src="{{eat.img}}" style="width: 80px; "></td>
+            <td>{{eat.title}}</td>
+            <td>{{eat.score}}</td>
+            <td>{{eat.location}}</td>
+            <td>{{eat.menu}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

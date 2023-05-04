@@ -17,7 +17,7 @@
   {% block additional_head %}{% endblock %}
 </head>
 <body>
-  <div class="container-fluid mt-3 bg-dark text-white text-center">
+  <div class="container-fluid bg-dark text-white text-center">
     <h1>My Boot strap Page</h1>
     <p>{% block subtitle %}{% endblock %}</p>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark mt-5">
@@ -44,14 +44,14 @@
   </div>
   <table>
     <tr class="row">
-      <td class="col-4">
-        <button onclick="location.href='/'" style="width:600px; height: 100px; background-color: whitesmoke;">Home</button>
-        <button onclick="location.href='/scatter'" style="width:600px; height: 100px; background-color: whitesmoke;">산점도</button>
-        <button onclick="location.href='/hotPlaces'" style="width:600px; height: 100px; background-color: whitesmoke;">Hot Place</button>
-        <button onclick="location.href='/interpark'" style="width:600px; height: 100px; background-color: whitesmoke;">Interpark</button>
-        <button onclick="location.href='/progress'" style="width:600px; height: 100px; background-color: whitesmoke;">Progress Bar</button>
+      <td class="col-3">
+        <button onclick="location.href='/'" style=" height: 70px; width: 100%; background-color: whitesmoke;">Home</button>
+        <button onclick="location.href='/scatter'" style=" height: 70px; width: 100%; background-color: whitesmoke;">산점도</button>
+        <button onclick="location.href='/hotPlaces'" style=" height: 70px; width: 100%; background-color: whitesmoke;">Hot Place</button>
+        <button onclick="location.href='/interpark'" style=" height: 70px; width: 100%; background-color: whitesmoke;">Interpark</button>
+        <button onclick="location.href='/progress'" style=" height: 70px; width: 100%; background-color: whitesmoke;">Progress Bar</button>
       </td>
-      <td class="col-8">
+      <td class="col-9">
         {% block content %}{% endblock %}
       </td>
     </tr>

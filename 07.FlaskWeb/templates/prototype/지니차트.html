@@ -1,0 +1,24 @@
+{% extends "prototype/base.html" %}
+{% block title %}지니차트{% endblock %}
+{% block subtitle %}지니차트<i class="fas fa-home"></i>{% endblock %}
+{% block content %}
+<table border="1" style="margin-top: 2%; width: 1200px;">
+    <tr>
+        <th style="text-align: center; width: 7%;">순위</th>
+        <th style="text-align: center; width: 7%;">이미지</th>
+        <th>제목</th>
+        <th>가수</th>
+        <th>앨범</th>
+    </tr>
+    {% for gene in gene_list %}
+    <tr>
+        <td>{{gene.rank}}</td>
+        <td><img src="{{gene.img}}" height="40"></td>
+        <td>{{gene.title}}</td>
+        <td>{{gene.artist}}</td>
+        <td>{{gene.album}}</td>
+    </tr>
+    {% endfor %}
+</table>
+</form>
+{% endblock %}

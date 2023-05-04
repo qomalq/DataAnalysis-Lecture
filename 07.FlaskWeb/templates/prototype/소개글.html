@@ -1,0 +1,52 @@
+{% extends "prototype/base.html" %}
+{% block title %}소개{% endblock %}
+{% block weather %}{{weather | safe()}}{% endblock %}
+{% block additional_head %}
+{% endblock %}
+{% block subtitle %}소개{% endblock %}
+{% block content %}
+    <div class="row">
+        <div class="col-3">
+            <div class="container mt-3">
+                <div class="card img-fluid" id="card" style="background: none; border-style: none;">
+                        <img class="card-img-top" src="{{url_for('static', filename='img/user-profile-02.svg')}}" alt="Card image" style="width:100%">
+                        <hr>
+                        <div class="card-img-top">
+                        <p class="card-text"> <img src="{{url_for('static', filename='img/image-avatar.svg')}}">이름 : 정정훈</p>
+                        <p class="card-text"> <img src="{{url_for('static', filename='img/arrow-right-square-contained.svg')}}">나이 : 25</p>
+                        <p class="card-text"> <a href="https://www.naver.com/"> <button style="padding: 2px; background: none; border-style: none;" id="e"><img src="{{url_for('static', filename='img/email.svg')}}"></button></a></img>이메일 : rmsdnr45@naver.com </p>
+                        <p class="card-text"> <a href="https://map.naver.com/v5/search/%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%84%B1%EB%82%A8%EC%8B%9C%20%EB%B6%84%EB%8B%B9%EA%B5%AC%20%EA%B8%88%EA%B3%A1%EB%8F%99/address/14149492.36053386,4488235.862271633,%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%84%B1%EB%82%A8%EC%8B%9C%20%EB%B6%84%EB%8B%B9%EA%B5%AC%20%EA%B8%88%EA%B3%A1%EB%8F%99,adm?c=13,0,0,0,dh&isCorrectAnswer=true">
+                          <button style="padding: 2px; background: none; border-style: none;" id="m"><img src="{{url_for('static', filename='img/marker-02.svg')}}"></button></a></img>거주지 : 성남시 분당구 금곡동</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3" border=1>
+                <div class="d-grid">
+                    <button style="height: 800px; width: 400px; background-position: center; background-image: url({{url_for('static', filename='img/취미.jpg')}}); border-style: none; color: black;" type="button"> 
+                      <ul class="btnsBox">
+                        <li class="btnbox active" onclick="change_btn(event)" style="opacity: 80%;"><a href="/01FrontEnd/소개/취미.html"> 
+                          <p style="margin: 0; text-align: left; font-size: 60px; color: black;">취미</p></a></li>
+                    </button>
+                </div>
+        </div>
+        <div class="col-3" border=1>
+                <div class="d-grid">
+                    <button style="height: 800px; width: 400px; background-position: center; background-image: url({{url_for('static', filename='img/여행.jpg')}}); border-style: none; color: black" type="button">
+                      <ul class="btnsBox">
+                        <li class="btnbox active" onclick="change_btn(event)" style="opacity: 80%;"><a href="/01FrontEnd/소개/여행.html"> 
+                          <p style="margin: 0; text-align: left; font-size: 60px; color: black;">여행</p></a></li>
+                    </button>
+                </div>
+        </div>
+        <div class="col-3" border=1>
+                <div class="d-grid">
+                    <button style="height: 800px; width: 400px; background-position: center; background-image: url({{url_for('static', filename='img/음식.jpg')}}); border-style: none; color: black" type="button">
+                      <ul class="btnsBox">
+                        <li class="btnbox active" onclick="change_btn(event)" style="opacity: 80%;"><a href="/01FrontEnd/소개/음식.html"> 
+                          <p style="margin: 0; text-align: left; font-size: 60px; color: black;">음식</p></a></li>
+                    </button>
+                </div>
+        </div>
+    </div>
+{% endblock %}
