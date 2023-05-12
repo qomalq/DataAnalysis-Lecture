@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" style="margin-top: 2%; width: 1200px;">
+        <tr>
+            <th style="text-align: center; width: 7%;">순위</th>
+            <th style="text-align: center; width: 7%;">이미지</th>
+            <th>제목</th>
+            <th>가수</th>
+            <th>앨범</th>
+        </tr>
+        {% for melon in song_list %}
+        <tr>
+            <td>{{melon.순위}}</td>
+            <td><img src="{{melon.albumImage}}" height="40"></td>
+            <td>{{melon.곡명}}</td>
+            <td>{{melon.가수}}</td>
+            <td>{{melon.앨범}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

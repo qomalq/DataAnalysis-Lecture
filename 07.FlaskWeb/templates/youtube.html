@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" style="margin-top: 2%; width: 1200px;">
+        <tr>
+            <th>순위</th>
+            <th>카테고리</th>
+            <th>채널명</th>
+            <th>구독자수</th>
+            <th>조회수</th>
+            <th>비디오수</th>
+        </tr>
+        {% for youtube in rank_list %}
+        <tr>
+            <td>{{youtube.순위}}</td>
+            <td>{{youtube.카테고리}}</td>
+            <td>{{youtube.채널명}}</td>
+            <td>{{youtube.구독자수}}</td>
+            <td>{{youtube.조회수}}</td>
+            <td>{{youtube.비디오수}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+<script>
+    $(document).ready(function() {
+        $('#example').DataTable({
+            info: false,
+            searching: true,
+            paging: true,
+            ordering: false,
+            //order: [[ 0, "asc" ]],
+            columnDefs: [{
+                "targets": [ 0 ],
+                "visible": false,
+                "searchable": false
+            }],
+            language: {
+                thousands: ',',
+                search: '',
+                searchPlaceholder: "검색어",
+                paginate: {
+                    first: '처음',
+                    previous: '이전',
+                    next: '다음',
+                    last: '마지막',
+                }
+            },
+            oLanguage: {
+                sLengthMenu: "_MENU_",
+            },
+            "lengthMenu": [[10, -1], ["10개씩 보기", "모두 보기"]]
+        });
+    } );
+</script>
